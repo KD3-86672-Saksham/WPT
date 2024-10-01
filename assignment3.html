@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <center>
+        <h1>
+            Registration Form
+        </h1>
+    </center>
+    <div style="display: flex;border: 1px solid black;height: 600px;">
+        <div style="border: 1px solid black;width: 50%;">
+            <center>
+            <video height="450px" width="600px" controls src="video.mp4" style="margin-top: 30px;"></video>
+            </center>
+        </div>
+        <div style="border: 1px solid black;width: 50%;">
+            <table style="margin-top: 110px;margin-left: 20px;height: 280px;">
+                <tr>
+                    <td>Name</td>
+                    <td colspan="4">
+                        <input type="text" placeholder="Enter your name.." id="nm"/> *
+                    </td>
+                    <td id="error" style="color: red;"></td>
+                </tr>
+                <tr>
+                    <td>
+                        BirthDate
+                    </td>
+                    <td colspan="4">
+                        <input type="date" name="BirthDate" id="dob"> *
+                        <!-- <div id="error" style="color: red;"></div -->
+                    </td>
+                    <td id="error1" style="color: red;"></td>
+                </tr>
+                <tr>
+                    <td>
+                        Email
+                    </td>
+                    <td colspan="5">
+                        <input type="email" placeholder="Enter you email ID...">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Password
+                    </td>
+                    <td colspan="5">
+                        <input type="password" placeholder="********">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Address
+                    </td>
+                    <td>
+                        <select name="state" id="state">
+                            <option value="state" disabled selected hidden>select your state..</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Maharashtra">Maharashtra</option>
+                            <option value="Goa">Goa</option>
+                            <option value="Assam">Assam</option>
+                            <option value="Punjab">Punjab</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select name="city" id="city">
+                        <option value="city" disabled selected hidden>select your city..</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Goa">Goa</option>
+                        <option value="Guwahati">Guwahati</option>
+                        <option value="Chandigarh">Chandigarh</option>
+                    </td>
+                    <td colspan="3">
+                        <input type="number" placeholder="Enter your pincode...">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Gender
+                    </td>
+                    <td>
+                        <input type="radio">Male
+                    </td>
+                    <td>
+                        <input type="radio">Female
+                    </td>
+                    <td>
+                        <input type="radio">Others
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        Upload Photo
+                    </td>
+                    <td colspan="5">
+                        <input type="file" placeholder="Browse your photo...">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 150px;">
+                        Select Your course
+                    </td>
+                    <td colspan="5">
+                        <select name="course" id="course">
+                            <option value="course" disabled selected hidden>select your course..</option>
+                            <option value="DAC">DAC</option>
+                            <option value="DBDA">DBDA</option>
+                            <option value="DTIS">DTIS</option>
+                            <option value="VLSI">VLSI</option>
+                            <option value="DMC">DMC</option>
+                    </td>
+                </tr>
+            </table>
+            <div style="margin-top: 30px;margin-left: 130px;">
+                <input type="button" id="btn" value="Register" style="border-radius: 5px;height: 30px;width: 90px;font-size: 15px;" onclick="validate()"/>
+                <!-- <input type="button" id="clr" value="Clear" style="border-radius: 5px;height: 30px;width: 90px;font-size: 15px;margin-left: 80px;" onclick="Clear()"> -->
+                <script>
+                        function Clear(){
+                        var refTomyDiv = document.getElementById("clr");
+                        alert("Are you sure ?")
+                        }
+
+                        function validate(){
+                            debugger;
+                            var refToName = document.getElementById("nm");
+                            console.log(refToName.value);
+                            if(refToName.value==""){
+                                //var adiv = document.getElementById("error");
+                                document.getElementById("error").innerText = "cannot be empty";
+                            }
+                            else{
+                                document.getElementById("error").innerText = "";
+                                console.log(refToName.value);
+                            }
+                            if(dob.value==""){
+                                console.log(dob.value);
+                                var adiv = document.getElementById("error1");
+                                adiv.innerText = "cannot be empty";
+                            }
+                            else{
+                                document.getElementById("error1").innerText = "";
+                                console.log(refToName.value);
+                            }
+                        }
+                </script>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

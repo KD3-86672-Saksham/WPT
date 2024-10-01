@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <center>
+        <h1>
+            Calculator
+        </h1>
+    </center>
+    <center>
+        <div style="height: 500px;width: 800px;">
+        <table style="height: 200px;"">
+            <tr>
+                <td style="width: 150px;">
+                    Enter Number 1
+                </td>
+                <td>
+                    <input type="number" id="number1">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Enter Number 2
+                </td>
+                <td>
+                    <input type="number" id="number2">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Result
+                </td>
+                <td>
+                    <div id="result" style="border: 1px solid black;height: 20px;">
+                        
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <br>
+
+        <input type="button" name="" id="" value="ADDITION" onclick="add()">
+        <input type="button" name="" id="" value="SUBSTRACTION" style="margin-left: 20px;" onclick="sub()">
+        <input type="button" name="" id="" value="MULTIPLICATION" style="margin-left: 20px;" onclick="mul()">
+        <input type="button" name="" id="" value="DIVISION" style="margin-left: 20px;"onclick="div()">
+
+
+        </div>
+    </center>
+
+    <script>
+        var a = document.getElementById("number1");
+        var b = document.getElementById("number2");
+
+        function add(){
+            var c = document.getElementById("result");
+            c.innerText = parseInt(a.value) + parseInt(b.value);
+        }
+
+        function sub(){
+            var c = document.getElementById("result");
+            c.innerText = parseInt(a.value) - parseInt(b.value);
+        }
+
+        function mul(){
+            var c = document.getElementById("result");
+            c.innerText = parseInt(a.value) * parseInt(b.value);
+        }
+
+        function div(){
+            var c = document.getElementById("result");
+            c.innerText = parseInt(a.value) / parseInt(b.value);
+        }
+        
+    </script>
+</body>
+</html>
